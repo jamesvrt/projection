@@ -17,6 +17,11 @@ e.g., a UTM Zone. However, there may also be Assets intended for display, like a
 been reprojected to a different CRS, e.g., Web Mercator, or resized to better accommodate that use case. In this case, the 
 fields should be specified at the Item Asset level, while those Item Asset objects that use the defaults can remain unspecified.
 
+If an Item has Assets in more than one coordinate reference system but for which there is no default, use the projection extension to set
+coordinate reference system information on each Asset and set the required coordinate reference information
+to `null` for the Item. It is strongly recommended to include all coordianate reference systems in the Item's Collection
+summaries.
+
 - Examples:
   - [Item example](examples/item.json)
 - [JSON Schema](json-schema/schema.json)
